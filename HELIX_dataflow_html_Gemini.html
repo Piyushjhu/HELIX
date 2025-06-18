@@ -1,0 +1,631 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red23\green24\blue24;\red140\green211\blue254;
+\red202\green202\blue202;\red109\green109\blue109;\red194\green126\blue101;\red109\green115\blue120;\red212\green212\blue212;
+\red113\green192\blue131;\red167\green197\blue152;\red183\green111\blue247;}
+{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c12157\c12549;\cssrgb\c61176\c86275\c99608;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c50196\c50196\c50196;\cssrgb\c80784\c56863\c47059;\cssrgb\c50196\c52549\c54510;\cssrgb\c86275\c86275\c86275;
+\cssrgb\c50588\c78824\c58431;\cssrgb\c70980\c80784\c65882;\cssrgb\c77255\c54118\c97647;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 html\cf5 \strokec5  \cf4 \strokec4 lang\cf6 \strokec6 =\cf7 \strokec7 "en"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "scroll-smooth"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 charset\cf6 \strokec6 =\cf7 \strokec7 "UTF-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 name\cf6 \strokec6 =\cf7 \strokec7 "viewport"\cf5 \strokec5  \cf4 \strokec4 content\cf6 \strokec6 =\cf7 \strokec7 "width=device-width, initial-scale=1.0"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \strokec5 Interactive System Flowchart\cf6 \strokec6 </\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://cdn.tailwindcss.com"\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 link\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"\cf5 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf7 \strokec7 "stylesheet"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cb1 \
+\cb3     \cf8 \strokec8 <!-- Chosen Palette: Dark Grayscale with Cyber Blue/Green Accents -->\cf5 \cb1 \strokec5 \
+\cb3     \cf8 \strokec8 <!-- Application Structure Plan: The application maintains its five-stage vertical flow: 'Input Data', 'Experiment', 'Data to Cluster', 'Cluster to Girder', and 'Post-Girder Processing'. This linear structure is intuitive for understanding a sequential data pipeline. A sticky top navigation allows quick jumps. Key components are interactive, with clicks revealing detailed modals, providing on-demand information without clutter. The "Overall Workflow" at the top offers a high-level summary, reinforcing the user's mental model of the system. This structure prioritizes comprehensive yet digestible information delivery, suitable for a complex technical workflow. The overall workflow now explicitly places arrows between nodes for clearer visual flow. -->\cf5 \cb1 \strokec5 \
+\cb3     \cf8 \strokec8 <!-- Visualization & Content Choices: Flowchart nodes are implemented with semantic HTML `div` elements, styled using Tailwind CSS for a sharp, technical aesthetic with dark backgrounds and contrasting text. Flow arrows are now explicit HTML elements with Unicode characters, carefully positioned using flexbox and responsive classes (`hidden md:block`, `block md:hidden`) to appear *between* nodes for both horizontal (desktop) and vertical (mobile) layouts, adhering to the 'NO SVG/Mermaid' constraint. Interactivity (Goal: Inform, Organize) is managed via JavaScript-driven modals, providing detailed pop-ups for each component. New data flows and components are clearly represented as distinct, clickable elements. The styling aims for a high-contrast, clean, and professional look, characteristic of data visualization and system monitoring dashboards, enhancing readability and engagement. -->\cf5 \cb1 \strokec5 \
+\cb3     \cf8 \strokec8 <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 body\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-family:\cf5 \strokec5  \cf10 \strokec10 'Inter'\cf9 \strokec9 ,\cf5 \strokec5  \cf7 \strokec7 sans-serif\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background-color:\cf5 \strokec5  #1a202c\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* dark gray background */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #e2e8f0\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* light gray text */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .flow-arrow::after\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 content:\cf5 \strokec5  \cf10 \strokec10 '\uc0\u8594 '\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-size:\cf5 \strokec5  \cf11 \strokec11 2.2rem\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Slightly larger arrows */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #63b3ed\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* cyber blue */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 margin:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 1rem\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-weight:\cf5 \strokec5  \cf11 \strokec11 900\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Bolder arrow */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .flow-arrow-down::after\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 content:\cf5 \strokec5  \cf10 \strokec10 '\uc0\u8595 '\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-size:\cf5 \strokec5  \cf11 \strokec11 2.2rem\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Slightly larger arrows */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #63b3ed\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* cyber blue */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-weight:\cf5 \strokec5  \cf11 \strokec11 900\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Bolder arrow */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .flow-node\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 transition:\cf5 \strokec5  \cf7 \strokec7 all\cf5 \strokec5  \cf11 \strokec11 0.2s\cf5 \strokec5  \cf7 \strokec7 ease-in-out\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background-color:\cf5 \strokec5  #2d3748\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* darker gray for nodes */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 border-color:\cf5 \strokec5  #4a5568\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* slightly lighter border */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #e2e8f0\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* light text for nodes */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 box-shadow:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 4px\cf5 \strokec5  \cf11 \strokec11 6px\cf5 \strokec5  \cf11 \strokec11 -1px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.2\cf7 \strokec7 )\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 2px\cf5 \strokec5  \cf11 \strokec11 4px\cf5 \strokec5  \cf11 \strokec11 -1px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.12\cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* sharper shadow */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .flow-node:hover\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 transform:\cf5 \strokec5  \cf7 \strokec7 translateY(\cf11 \strokec11 -4px\cf7 \strokec7 )\cf5 \strokec5  \cf7 \strokec7 scale(\cf11 \strokec11 1.02\cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* slight lift and scale */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 box-shadow:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 15px\cf5 \strokec5  \cf11 \strokec11 20px\cf5 \strokec5  \cf11 \strokec11 -3px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.3\cf7 \strokec7 )\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 6px\cf5 \strokec5  \cf11 \strokec11 10px\cf5 \strokec5  \cf11 \strokec11 -2px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.18\cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* more prominent hover shadow */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 cursor:\cf5 \strokec5  \cf7 \strokec7 pointer\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 border-color:\cf5 \strokec5  #63b3ed\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* accent blue on hover */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .overall-flow-node\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 flex:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf7 \strokec7 auto\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Do not grow or shrink, take content width */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background-color:\cf5 \strokec5  #2c5282\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* slightly darker blue for overall nodes */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 border:\cf5 \strokec5  \cf11 \strokec11 1px\cf5 \strokec5  \cf7 \strokec7 solid\cf5 \strokec5  #4299e1\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* brighter blue border */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 border-radius:\cf5 \strokec5  \cf11 \strokec11 0.5rem\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 padding:\cf5 \strokec5  \cf11 \strokec11 0.75rem\cf5 \strokec5  \cf11 \strokec11 1rem\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 text-align:\cf5 \strokec5  \cf7 \strokec7 center\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-weight:\cf5 \strokec5  \cf11 \strokec11 600\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #ffffff\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* white text */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 box-shadow:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 2px\cf5 \strokec5  \cf11 \strokec11 4px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.2\cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 flex\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 align-items:\cf5 \strokec5  \cf7 \strokec7 center\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 justify-content:\cf5 \strokec5  \cf7 \strokec7 center\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 height:\cf5 \strokec5  \cf11 \strokec11 60px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Fixed height for consistency */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 min-width:\cf5 \strokec5  \cf11 \strokec11 140px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Adjusted min-width for mobile stacking */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .overall-flow-arrow\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-size:\cf5 \strokec5  \cf11 \strokec11 1.8rem\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Larger arrows for overall flow */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #63b3ed\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 font-weight:\cf5 \strokec5  \cf11 \strokec11 900\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 margin:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 0.8rem\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Horizontal margin for desktop */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 /* Responsive adjustments for overall workflow */\cf5 \cb1 \strokec5 \
+\cb3         @\cf2 \strokec2 media\cf5 \strokec5  (\cf2 \strokec2 max-width:\cf5 \strokec5  767\cf2 \strokec2 px\cf5 \strokec5 ) \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             .overall-workflow-container \{\cb1 \
+\cb3                 \cf4 \strokec4 flex-direction:\cf5 \strokec5  \cf7 \strokec7 column\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Stack vertically on mobile */\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 align-items:\cf5 \strokec5  \cf7 \strokec7 center\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Center items in column */\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 .overall-flow-node\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 width:\cf5 \strokec5  \cf11 \strokec11 80%\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Occupy more width on mobile */\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 max-width:\cf5 \strokec5  \cf11 \strokec11 250px\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Constrain width on small screens too */\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 margin-bottom:\cf5 \strokec5  \cf11 \strokec11 0.5rem\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Add spacing between vertical nodes */\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 .overall-flow-arrow\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 margin:\cf5 \strokec5  \cf11 \strokec11 0.5rem\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Vertical margin for mobile */\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 .overall-flow-arrow.hidden.md\\:block\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf8 \strokec8 /* Hide horizontal arrow on mobile */\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 none\cf5 \strokec5  \cf12 \strokec12 !important\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 .overall-flow-arrow.block.md\\:hidden\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf8 \strokec8 /* Show vertical arrow on mobile */\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 block\cf5 \strokec5  \cf12 \strokec12 !important\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf8 \strokec8 /* Adjust margin-bottom for last node and last arrow if column */\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 .overall-workflow-container\cf5 \strokec5  \cf9 \strokec9 >\cf5 \strokec5  \cf2 \strokec2 *:last-child\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 margin-bottom:\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 .overall-workflow-container\cf5 \strokec5  \cf9 \strokec9 >\cf5 \strokec5  \cf2 \strokec2 *:last-child.overall-flow-arrow\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 none\cf5 \strokec5  \cf12 \strokec12 !important\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Hide the last arrow */\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \}\cb1 \
+\
+\cb3         \cf8 \strokec8 /* Specific node type styling adjustments for technical look */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .node-input\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  #2a4365\cf9 \strokec9 ;\cf5 \strokec5  \cf4 \strokec4 border-color:\cf5 \strokec5  #4299e1\cf9 \strokec9 ;\cf5 \strokec5  \cf9 \strokec9 \}\cf5 \strokec5  \cf8 \strokec8 /* Darker blue */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .node-process\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  #4a5568\cf9 \strokec9 ;\cf5 \strokec5  \cf4 \strokec4 border-color:\cf5 \strokec5  #a0aec0\cf9 \strokec9 ;\cf5 \strokec5  \cf9 \strokec9 \}\cf5 \strokec5  \cf8 \strokec8 /* Darker gray */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .node-output\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  #63171b\cf9 \strokec9 ;\cf5 \strokec5  \cf4 \strokec4 border-color:\cf5 \strokec5  #e53e3e\cf9 \strokec9 ;\cf5 \strokec5  \cf9 \strokec9 \}\cf5 \strokec5  \cf8 \strokec8 /* Darker red */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .node-ancillary\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  #2f433f\cf9 \strokec9 ;\cf5 \strokec5  \cf4 \strokec4 border-color:\cf5 \strokec5  #48bb78\cf9 \strokec9 ;\cf5 \strokec5  \cf9 \strokec9 \}\cf5 \strokec5  \cf8 \strokec8 /* Darker green */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .node-producer\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  #4a2b0a\cf9 \strokec9 ;\cf5 \strokec5  \cf4 \strokec4 border-color:\cf5 \strokec5  #dd6b20\cf9 \strokec9 ;\cf5 \strokec5  \cf9 \strokec9 \}\cf5 \strokec5  \cf8 \strokec8 /* Darker orange */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .node-data-flow\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  \cf4 \strokec4 background-color:\cf5 \strokec5  #2b3a4a\cf9 \strokec9 ;\cf5 \strokec5  \cf4 \strokec4 border-color:\cf5 \strokec5  #63b3ed\cf9 \strokec9 ;\cf5 \strokec5  \cf4 \strokec4 color:\cf5 \strokec5  #a0e0ff\cf9 \strokec9 ;\cf5 \strokec5  \cf9 \strokec9 \}\cf5 \strokec5  \cf8 \strokec8 /* Light blue for data flow */\cf5 \cb1 \strokec5 \
+\
+\
+\cb3         \cf8 \strokec8 /* Modal styling */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 #modal\cf5 \strokec5  \cf9 \strokec9 >\cf5 \strokec5  \cf2 \strokec2 div\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 background-color:\cf5 \strokec5  #2d3748\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Dark background for modal */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #e2e8f0\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Light text for modal */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 border:\cf5 \strokec5  \cf11 \strokec11 1px\cf5 \strokec5  \cf7 \strokec7 solid\cf5 \strokec5  #4a5568\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 box-shadow:\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 10px\cf5 \strokec5  \cf11 \strokec11 25px\cf5 \strokec5  \cf11 \strokec11 -3px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.4\cf7 \strokec7 )\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf5 \strokec5  \cf11 \strokec11 4px\cf5 \strokec5  \cf11 \strokec11 10px\cf5 \strokec5  \cf11 \strokec11 -2px\cf5 \strokec5  \cf7 \strokec7 rgba(\cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 0.25\cf7 \strokec7 )\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 #modal-title\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #63b3ed\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Accent blue for modal title */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 #modal\cf5 \strokec5  \cf2 \strokec2 button\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #a0aec0\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Lighter gray for close button */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 #modal\cf5 \strokec5  \cf2 \strokec2 button:hover\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #ffffff\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* White on hover */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .list-disc\cf5 \strokec5  \cf2 \strokec2 li\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 padding-left:\cf5 \strokec5  \cf11 \strokec11 0.5em\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Adjust list item padding for better look */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 text-indent:\cf5 \strokec5  \cf11 \strokec11 -0.5em\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Pull bullet point back */\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .list-disc\cf5 \strokec5  \cf2 \strokec2 li::before\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 content:\cf5 \strokec5  \cf10 \strokec10 "\'95"\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Custom bullet point */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 color:\cf5 \strokec5  #48bb78\cf9 \strokec9 ;\cf5 \strokec5  \cf8 \strokec8 /* Green bullet point */\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 margin-right:\cf5 \strokec5  \cf11 \strokec11 0.5em\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 body\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-700"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf8 \strokec8 <!-- Header & Navigation -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 header\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-800/80 backdrop-blur-lg sticky top-0 z-40 shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 nav\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "container mx-auto px-6 py-3 flex justify-between items-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 h1\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xl font-bold text-white"\cf6 \strokec6 >\cf5 \strokec5 System Flow Explorer\cf6 \strokec6 </\cf2 \strokec2 h1\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hidden md:flex space-x-6 text-sm font-semibold"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#overall-workflow"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 hover:text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 Overall Workflow\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#input-data"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 hover:text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 Input Data\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#experiment"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 hover:text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 Experiment\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#data-to-cluster"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 hover:text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 Data to Cluster\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#cluster-to-girder"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 hover:text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 Cluster to Girder\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#post-girder"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 hover:text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 Post-Girder Processing\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 a\cf5 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf7 \strokec7 "#dictionary"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 hover:text-blue-400"\cf6 \strokec6 >\cf5 \strokec5 Data Dictionary\cf6 \strokec6 </\cf2 \strokec2 a\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 nav\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 header\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 main\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "container mx-auto p-4 md:p-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf8 \strokec8 <!-- Introduction -->\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-center mb-16"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 h2\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-4xl font-bold text-white mb-4"\cf6 \strokec6 >\cf5 \strokec5 Understanding the Data Workflow\cf6 \strokec6 </\cf2 \strokec2 h2\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "max-w-3xl mx-auto text-gray-400"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 This interactive application visualizes a complex data processing system, broken down into its major stages. Navigate through the sections below or click on any component to explore its specific role and details.\cb1 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 <!-- Overall Workflow -->\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "overall-workflow"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-900 rounded-2xl shadow-xl mb-12"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-6 text-center"\cf6 \strokec6 >\cf5 \strokec5 Overall Workflow at a Glance\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8 text-center max-w-2xl mx-auto"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 A high-level overview of the entire data processing pipeline, from initial experiment setup to final user-requested outputs. Click on any of the detailed sections below for an in-depth view of each stage.\cb1 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-workflow-container flex flex-wrap justify-center items-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-node"\cf6 \strokec6 >\cf5 \strokec5 Input Data\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow hidden md:block"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8594 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow block md:hidden"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8595 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-node"\cf6 \strokec6 >\cf5 \strokec5 Experiment\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow hidden md:block"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8594 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow block md:hidden"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8595 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-node"\cf6 \strokec6 >\cf5 \strokec5 Data to Cluster\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow hidden md:block"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8594 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow block md:hidden"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8595 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-node"\cf6 \strokec6 >\cf5 \strokec5 Cluster to Girder\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow hidden md:block"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8594 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-arrow block md:hidden"\cf6 \strokec6 >\cf5 \strokec5 \uc0\u8595 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "overall-flow-node"\cf6 \strokec6 >\cf5 \strokec5 Post-Girder Processing\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf8 \strokec8 <!-- No arrow after the last node -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 <!-- Main Flowchart Visualization -->\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "space-y-12"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf8 \strokec8 <!-- 1. Input Data (Exp run script generation) -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "input-data"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-800 rounded-2xl shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-2"\cf6 \strokec6 >\cf5 \strokec5 Stage 1: Input Data (Experiment Run Script Generation)\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8"\cf6 \strokec6 >\cf5 \strokec5 This initial stage focuses on preparing and generating scripts for experiment runs, along with capturing foundational data through various input mechanisms.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-8 md:space-y-0"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-input border-blue-600 rounded-xl p-6 w-64"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('IGSN')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-blue-300"\cf6 \strokec6 >\cf5 \strokec5 IGSN\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 Initial Data Identifier\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down mt-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-input border-blue-600 rounded-xl p-6 w-64"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Data Input Forms')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-blue-300"\cf6 \strokec6 >\cf5 \strokec5 Data Input Forms\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 Script & Parameter Input\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hidden md:block flow-arrow"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-input border-green-600 rounded-xl p-6 w-64"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('User Interface')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-green-300"\cf6 \strokec6 >\cf5 \strokec5 User Interface\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-green-200"\cf6 \strokec6 >\cf5 \strokec5 Direct User Interaction\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf8 \strokec8 <!-- 2. Experiment (Run and Data Generation) -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "experiment"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-800 rounded-2xl shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-2"\cf6 \strokec6 >\cf5 \strokec5 Stage 2: Experiment (Run and Data Generation)\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8"\cf6 \strokec6 >\cf5 \strokec5 This is the core of the experiment execution, where HELIX acts as the main data generation source, orchestrating various producers. Click on a component to understand its role in data generation.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col items-center justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down mb-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-process border-purple-600 rounded-xl p-8 w-72 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('HELIX')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-xl text-purple-300"\cf6 \strokec6 >\cf5 \strokec5 HELIX\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-purple-200"\cf6 \strokec6 >\cf5 \strokec5 Main Data Generation Source\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down my-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xl font-bold text-white mb-4"\cf6 \strokec6 >\cf5 \strokec5 Major Data Producers:\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-1 md:grid-cols-3 gap-8 items-start"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-producer border-yellow-600 rounded-xl p-6 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Wave Plate')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-yellow-300"\cf6 \strokec6 >\cf5 \strokec5 Wave Plate\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-yellow-200"\cf6 \strokec6 >\cf5 \strokec5 Data Producer\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-producer border-yellow-600 rounded-xl p-6 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Energymeter')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-yellow-300"\cf6 \strokec6 >\cf5 \strokec5 Energymeter\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-yellow-200"\cf6 \strokec6 >\cf5 \strokec5 Data Producer\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-producer border-yellow-600 rounded-xl p-6 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Profiler')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-yellow-300"\cf6 \strokec6 >\cf5 \strokec5 Profiler\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-yellow-200"\cf6 \strokec6 >\cf5 \strokec5 Data Producer\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-producer border-yellow-600 rounded-xl p-6 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Motion Stage')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-yellow-300"\cf6 \strokec6 >\cf5 \strokec5 Motion Stage\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-yellow-200"\cf6 \strokec6 >\cf5 \strokec5 Data Producer\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-producer border-yellow-600 rounded-xl p-6 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Heating Laser')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-yellow-300"\cf6 \strokec6 >\cf5 \strokec5 Heating Laser\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-yellow-200"\cf6 \strokec6 >\cf5 \strokec5 Data Producer (HT)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-producer border-yellow-600 rounded-xl p-6 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Pyrometer')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-yellow-300"\cf6 \strokec6 >\cf5 \strokec5 Pyrometer\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-yellow-200"\cf6 \strokec6 >\cf5 \strokec5 Data Producer (PY)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-producer border-yellow-600 rounded-xl p-6 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('PDV')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-yellow-300"\cf6 \strokec6 >\cf5 \strokec5 PDV\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-yellow-200"\cf6 \strokec6 >\cf5 \strokec5 Data Producer & Validator\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down my-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col md:flex-row items-center justify-center md:space-x-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-input border-blue-600 rounded-xl p-6 w-64 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Oscilloscope')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-blue-300"\cf6 \strokec6 >\cf5 \strokec5 Oscilloscope\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 Generates PDV Data (CSV)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hidden md:block flow-arrow"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-process border-purple-600 rounded-xl p-8 w-72 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('PDV')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-xl text-purple-300"\cf6 \strokec6 >\cf5 \strokec5 PDV\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-purple-200"\cf6 \strokec6 >\cf5 \strokec5 Data Validation Unit\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf8 \strokec8 <!-- 3. Data to Cluster (OpenMSI step1) -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "data-to-cluster"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-800 rounded-2xl shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-2"\cf6 \strokec6 >\cf5 \strokec5 Stage 3: Data to Cluster (OpenMSI Step 1)\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8"\cf6 \strokec6 >\cf5 \strokec5 After generation, various data types flow to the OpenMSI cluster for further processing and temporary storage, initiating the first step of data ingestion into the cluster environment.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col items-center justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-2 md:grid-cols-4 gap-4 mb-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-data-flow rounded-xl p-4 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('PDV Data Flow')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-base text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 PDV Data\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-100"\cf6 \strokec6 >\cf5 \strokec5 (from Oscilloscope)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-data-flow rounded-xl p-4 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('EN Data Flow')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-base text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 EN Data\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-100"\cf6 \strokec6 >\cf5 \strokec5 (Energy)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-data-flow rounded-xl p-4 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('PR Data Flow')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-base text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 PR Data\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-100"\cf6 \strokec6 >\cf5 \strokec5 (Beam Profiler)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-data-flow rounded-xl p-4 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('HT Data Flow')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-base text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 HT Data\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-100"\cf6 \strokec6 >\cf5 \strokec5 (Heating Laser)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-data-flow rounded-xl p-4 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('PY Data Flow')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-base text-blue-200"\cf6 \strokec6 >\cf5 \strokec5 PY Data\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-blue-100"\cf6 \strokec6 >\cf5 \strokec5 (Pyrometer)\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down mb-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-process border-indigo-600 rounded-xl p-8 w-80 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('OpenMSI Cluster')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-xl text-indigo-300"\cf6 \strokec6 >\cf5 \strokec5 OpenMSI Cluster\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-indigo-200"\cf6 \strokec6 >\cf5 \strokec5 Primary Processing Cluster\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-indigo-100 mt-1"\cf6 \strokec6 >\cf5 \strokec5 Data from PDV_data folder has interface\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-xs text-indigo-100"\cf6 \strokec6 >\cf5 \strokec5 Data remains on cluster for 30 days\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf8 \strokec8 <!-- 4. Cluster to Girder (step2) -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "cluster-to-girder"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-800 rounded-2xl shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-2"\cf6 \strokec6 >\cf5 \strokec5 Stage 4: Cluster to Girder (Step 2)\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8"\cf6 \strokec6 >\cf5 \strokec5 The final stage involves transferring processed data from the OpenMSI cluster to Girder, typically for long-term storage, sharing, and further analysis.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col items-center justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down mb-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-output border-red-600 rounded-xl p-8 w-72 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Girder')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-xl text-red-300"\cf6 \strokec6 >\cf5 \strokec5 Girder\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-red-200"\cf6 \strokec6 >\cf5 \strokec5 Data Management Platform\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cb1 \
+\cb3             \cf8 \strokec8 <!-- 5. Post-Girder Processing (ALPSS & SPADE) -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "post-girder"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-800 rounded-2xl shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-2"\cf6 \strokec6 >\cf5 \strokec5 Stage 5: Post-Girder Processing (ALPSS & SPADE)\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8"\cf6 \strokec6 >\cf5 \strokec5 After data is available on Girder, further analysis and processing occur, leading to specialized outputs and user-requested data.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex flex-col items-center justify-center"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down mb-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-process border-orange-600 rounded-xl p-8 w-72 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('ALPSS Post-Girder')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-xl text-orange-300"\cf6 \strokec6 >\cf5 \strokec5 ALPSS Run\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-orange-200"\cf6 \strokec6 >\cf5 \strokec5 Processes data from Girder\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down my-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                      \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-output border-lime-600 rounded-xl p-6 w-64 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Velocity Profile Folder')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-lg text-lime-300"\cf6 \strokec6 >\cf5 \strokec5 Velocity Profile Folder\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-lime-200"\cf6 \strokec6 >\cf5 \strokec5 Outputs from ALPSS\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                      \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down my-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-process border-orange-600 rounded-xl p-8 w-72 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('SPADE')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-xl text-orange-300"\cf6 \strokec6 >\cf5 \strokec5 SPADE Run\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-orange-200"\cf6 \strokec6 >\cf5 \strokec5 Processes velocity data\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-arrow-down my-4"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-output border-red-600 rounded-xl p-8 w-72 text-center"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Girder User Outputs')"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-xl text-red-300"\cf6 \strokec6 >\cf5 \strokec5 Girder\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-red-200"\cf6 \strokec6 >\cf5 \strokec5 User Requested Outputs Location\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cb1 \
+\cb3             \cf8 \strokec8 <!-- Ancillary Information -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "ancillary"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-800 rounded-2xl shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-2"\cf6 \strokec6 >\cf5 \strokec5 Ancillary Information & System Parameters\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8"\cf6 \strokec6 >\cf5 \strokec5 This section contains supplementary details about the system's configuration, monitoring, and associated parameters that support the overall workflow.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid md:grid-cols-2 gap-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-900 p-6 rounded-xl border border-gray-700"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-white mb-4"\cf6 \strokec6 >\cf5 \strokec5 System Parameters\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 ul\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "space-y-2 text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 li\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex justify-between"\cf6 \strokec6 ><\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5 AWP:\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5  \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-mono bg-gray-700 px-2 py-1 rounded text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 -2021, -0001, ...\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 li\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 li\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex justify-between"\cf6 \strokec6 ><\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5 EN:\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5  \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-mono bg-gray-700 px-2 py-1 rounded text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Parameter\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 li\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 li\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex justify-between"\cf6 \strokec6 ><\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5 PN:\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5  \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-mono bg-gray-700 px-2 py-1 rounded text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Parameter\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 li\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 li\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex justify-between"\cf6 \strokec6 ><\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5 PR:\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5  \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-mono bg-gray-700 px-2 py-1 rounded text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Parameter\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 li\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                             \cf6 \strokec6 <\cf2 \strokec2 li\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flex justify-between"\cf6 \strokec6 ><\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5 CA:\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 >\cf5 \strokec5  \cf6 \strokec6 <\cf2 \strokec2 span\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-mono bg-gray-700 px-2 py-1 rounded text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Parameter\cf6 \strokec6 </\cf2 \strokec2 span\cf6 \strokec6 ></\cf2 \strokec2 li\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 </\cf2 \strokec2 ul\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                      \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-900 p-6 rounded-xl border border-gray-700"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf6 \strokec6 <\cf2 \strokec2 h4\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "font-bold text-white mb-4"\cf6 \strokec6 >\cf5 \strokec5 Configuration & Monitoring\cf6 \strokec6 </\cf2 \strokec2 h4\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                          \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-sm text-gray-400"\cf6 \strokec6 >\cf5 \strokec5 The ALPSS system has associated configuration and monitoring components, as well as spare capacity and a designated person for export/upload tasks.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                          \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "mt-4 space-y-2"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                              \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-ancillary border-indigo-600 rounded-lg p-3 text-sm"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Config')"\cf6 \strokec6 >\cf5 \strokec5 Config\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                              \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-ancillary border-indigo-600 rounded-lg p-3 text-sm"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Monitor')"\cf6 \strokec6 >\cf5 \strokec5 Monitor\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                              \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-ancillary border-indigo-600 rounded-lg p-3 text-sm"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('SPARE')"\cf6 \strokec6 >\cf5 \strokec5 SPARE\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                              \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "flow-node node-ancillary border-indigo-600 rounded-lg p-3 text-sm"\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "showModal('Exp Up Person')"\cf6 \strokec6 >\cf5 \strokec5 Exp Up Person\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                          \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cb1 \
+\cb3             \cf8 \strokec8 <!-- Data Dictionary -->\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 section\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "dictionary"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "p-8 bg-gray-800 rounded-2xl shadow-xl"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                  \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold text-white mb-2"\cf6 \strokec6 >\cf5 \strokec5 Data Element Dictionary\cf6 \strokec6 </\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 p\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-gray-400 mb-8"\cf6 \strokec6 >\cf5 \strokec5 A complete list of all components and data elements identified in the system diagram.\cf6 \strokec6 </\cf2 \strokec2 p\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "grid grid-cols-2 md:grid-cols-4 gap-4 text-sm"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 IGSN\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Data Input Forms\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 HELIX\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 PDV\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Oscilloscope\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Wave Plate\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Energymeter\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Profiler\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Motion Stage\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Heating Laser\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Pyrometer\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 user inputs (PDV)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Pym (PDV)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Printers (PDV)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Namespaces (PDV)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 EN (Energy Data)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 PR (Beam Profiler Data)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 HT (Heating Laser Data)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 PY (Pyrometer Data)\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Pym Logic\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Counts\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 ALPSS\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 ALPSS OP\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 20150517_0003.csv\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Media\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Audion\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 User Interface\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 No of user\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Input\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Form\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 AWP\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 EN/PN/PR/CA\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 SPARE\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Exp Up Person\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 OpenMSI Cluster\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 PDV_data folder\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Girder\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Velocity Profile Folder\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 SPADE\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-700 p-3 rounded-lg text-gray-300"\cf6 \strokec6 >\cf5 \strokec5 Girder User Outputs\cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 </\cf2 \strokec2 section\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 main\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf8 \strokec8 <!-- Modal -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "modal"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 button\cf5 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf7 \strokec7 "hideModal()"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "absolute top-4 right-4 text-gray-400 hover:text-white"\cf6 \strokec6 >\cf5 \strokec5 &times;\cf6 \strokec6 </\cf2 \strokec2 button\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 h3\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "modal-title"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "text-2xl font-bold mb-4"\cf6 \strokec6 ></\cf2 \strokec2 h3\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3             \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "modal-content"\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "space-y-2"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf12 \strokec12 const\cf5 \strokec5  modal \cf9 \strokec9 =\cf5 \strokec5  document\cf9 \strokec9 .\cf5 \strokec5 getElementById\cf9 \strokec9 (\cf10 \strokec10 'modal'\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cb3         \cf12 \strokec12 const\cf5 \strokec5  modalTitle \cf9 \strokec9 =\cf5 \strokec5  document\cf9 \strokec9 .\cf5 \strokec5 getElementById\cf9 \strokec9 (\cf10 \strokec10 'modal-title'\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cb3         \cf12 \strokec12 const\cf5 \strokec5  modalContent \cf9 \strokec9 =\cf5 \strokec5  document\cf9 \strokec9 .\cf5 \strokec5 getElementById\cf9 \strokec9 (\cf10 \strokec10 'modal-content'\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf12 \strokec12 const\cf5 \strokec5  modalData \cf9 \strokec9 =\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'IGSN'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'IGSN (Initial Data Identifier)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Represents an initial identifier or tag for the data, crucial for tracking and organizing experiment runs. It serves as a foundational data point for subsequent processes.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Data Input Forms'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Data Input Forms (Script & Parameter Input)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>These forms are used for generating experiment run scripts and inputting essential parameters. They are the primary interface for defining and initiating new experiment data capture.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'User Interface'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'User Interface'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Provides a direct interface for user interaction with the system, likely for inputting various parameters or initiating processes. It captures:</p><ul class="list-disc list-inside mt-2"><li>Number of users</li><li>User-specific inputs</li><li>General form data</li></ul>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'HELIX'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'HELIX (Main Data Generation Source)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>HELIX is the central system responsible for orchestrating and generating the primary experiment data. It integrates with and receives input from its various data producers to compile comprehensive datasets.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Wave Plate'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Wave Plate (Data Producer)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A physical component or sensor that generates specific data during the experiment run, contributing directly to the data compiled by HELIX.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Energymeter'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Energymeter (Data Producer)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Measures and produces energy-related data during the experiment, which is fed into HELIX for holistic data generation (Corresponds to EN data flow).</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Profiler'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Profiler (Data Producer)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Generates profiling data, possibly related to performance or specific characteristics of the experiment, contributing to the HELIX dataset (Corresponds to PR data flow).</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Motion Stage'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Motion Stage (Data Producer)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Provides data related to physical movement or positioning within the experiment setup, essential for spatial or temporal data correlation within HELIX.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Heating Laser'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Heating Laser (Data Producer)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A component that generates heating laser data (HT), which is fed into HELIX as part of the overall experiment data.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Pyrometer'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Pyrometer (Data Producer)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>An instrument that measures temperature and generates pyrometer data (PY), contributing to the HELIX dataset.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'PDV'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'PDV (Data Producer & Validator)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A key data producer for HELIX. PDV specifically receives its primary data from an Oscilloscope in CSV format. It also performs data validation. Its internal functions include:</p><ul class="list-disc list-inside mt-2"><li><b>user inputs:</b> Handles specific user inputs related to data validation.</li><li><b>Pym:</b> Likely a Python-based module for data processing.</li><li><b>Printers:</b> Output or logging functions for PDV operations.</li><li><b>Namespaces:</b> Manages data organization within PDV.</li></ul>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Oscilloscope'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Oscilloscope (PDV Data Source)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>This instrument is directly coupled with the PDV and is responsible for generating data for the PDV in a CSV format. It contains an onboard Windows computer where the `PDV_data` folder is located.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'PDV Data Flow'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'PDV Data to Cluster'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Data originating from the PDV, typically in CSV format from the Oscilloscope, is transferred to the OpenMSI Cluster.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'EN Data Flow'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'EN (Energy) Data to Cluster'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Energy data generated by the Energymeter flows to the OpenMSI Cluster for processing.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'PR Data Flow'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'PR (Beam Profiler) Data to Cluster'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Beam profiler data from the Profiler component is sent to the OpenMSI Cluster for analysis.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'HT Data Flow'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'HT (Heating Laser) Data to Cluster'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Data generated by the Heating Laser is transmitted to the OpenMSI Cluster for integration with other experiment data.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'PY Data Flow'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'PY (Pyrometer) Data to Cluster'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Pyrometer data, capturing temperature measurements, flows to the OpenMSI Cluster for comprehensive analysis.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'OpenMSI Cluster'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'OpenMSI Cluster (Primary Processing Cluster)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>The first step in data transfer after experiment run. Various data streams (PDV, EN, PR, HT, PY) converge here for initial processing and temporary storage. Data from the `PDV_data` folder on the Oscilloscope has a direct interface with this cluster. Data remains on the cluster for 30 days.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Girder'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Girder (Data Management Platform)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>The primary destination for processed data from the OpenMSI cluster. Girder serves as a robust data management platform for long-term storage, sharing, and further analysis.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'ALPSS Post-Girder'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'ALPSS Run (Post-Girder Processing)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>After data is available on Girder, ALPSS performs further analysis, specifically generating velocity profiles from each trace. These profiles are then saved into a dedicated folder.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Velocity Profile Folder'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Velocity Profile Folder'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A dedicated storage location for the velocity profiles generated by the ALPSS run from the Girder data.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'SPADE'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'SPADE Run'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>SPADE runs on the velocity data files located in the "Velocity Profile Folder." It processes these files to generate user-requested outputs.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Girder User Outputs'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Girder (User Requested Outputs Location)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>The final destination on Girder where SPADE saves its processed outputs, tailored to user requests. This is a different location from the initial Girder data.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Pym Logic'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Pym Logic'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A module containing specific business logic, likely written in Python ("Pym"). It performs data transformations.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Counts'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Counts'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>This module performs aggregation or counting operations on the data.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'ALPSS'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'ALPSS (Downstream System - General)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A major downstream system that receives processed data. It has its own operational stage (ALPSS OP) and handles outputs like Media and Audion. Note: A separate ALPSS run occurs post-Girder.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'ALPSS OP'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'ALPSS OP (Operational Stage)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>The operational phase within the ALPSS system where data is actively processed or utilized.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 '20150517_0003.csv'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'CSV File Output (20150517_0003.csv)'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Represents a concrete data output from the system, a CSV file named `20150517_0003.csv`. This is likely a data export for reporting or analysis.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Media/Audion'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Media & Audion Outputs'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>The ALPSS system is responsible for generating media and "audion" (audio?) files as part of its output, potentially used for visualization or audio analysis.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Config'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Configuration'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A component for managing the configuration of the ALPSS system, ensuring it operates according to defined parameters.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Monitor'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Monitor'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A component for monitoring the status and performance of the ALPSS system, crucial for system health and troubleshooting.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'SPARE'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'SPARE'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>Indicates a reserved or spare component in the architecture, available for future expansion, redundancy, or as a placeholder for new features.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3             \cf10 \strokec10 'Exp Up Person'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 title\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 'Export/Upload Person'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                 content\cf9 \strokec9 :\cf5 \strokec5  \cf10 \strokec10 '<p>A note indicating a specific person or role is responsible for handling data exports and uploads from the system to external locations.</p>'\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \};\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf12 \strokec12 function\cf5 \strokec5  showModal\cf9 \strokec9 (\cf5 \strokec5 key\cf9 \strokec9 )\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf12 \strokec12 if\cf5 \strokec5  \cf9 \strokec9 (\cf5 \strokec5 modalData\cf9 \strokec9 [\cf5 \strokec5 key\cf9 \strokec9 ])\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 modalTitle\cf9 \strokec9 .\cf5 \strokec5 textContent \cf9 \strokec9 =\cf5 \strokec5  modalData\cf9 \strokec9 [\cf5 \strokec5 key\cf9 \strokec9 ].\cf5 \strokec5 title\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3                 modalContent\cf9 \strokec9 .\cf5 \strokec5 innerHTML \cf9 \strokec9 =\cf5 \strokec5  modalData\cf9 \strokec9 [\cf5 \strokec5 key\cf9 \strokec9 ].\cf5 \strokec5 content\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3                 modal\cf9 \strokec9 .\cf5 \strokec5 classList\cf9 \strokec9 .\cf5 \strokec5 remove\cf9 \strokec9 (\cf10 \strokec10 'hidden'\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf12 \strokec12 function\cf5 \strokec5  hideModal\cf9 \strokec9 ()\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             modal\cf9 \strokec9 .\cf5 \strokec5 classList\cf9 \strokec9 .\cf5 \strokec5 add\cf9 \strokec9 (\cf10 \strokec10 'hidden'\cf9 \strokec9 );\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 // Close modal on escape key\cf5 \cb1 \strokec5 \
+\cb3         window\cf9 \strokec9 .\cf5 \strokec5 addEventListener\cf9 \strokec9 (\cf10 \strokec10 'keydown'\cf9 \strokec9 ,\cf5 \strokec5  \cf9 \strokec9 (\cf5 \strokec5 e\cf9 \strokec9 )\cf5 \strokec5  \cf9 \strokec9 =>\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf12 \strokec12 if\cf5 \strokec5  \cf9 \strokec9 (\cf5 \strokec5 e\cf9 \strokec9 .\cf5 \strokec5 key \cf9 \strokec9 ===\cf5 \strokec5  \cf10 \strokec10 'Escape'\cf5 \strokec5  \cf9 \strokec9 &&\cf5 \strokec5  \cf9 \strokec9 !\cf5 \strokec5 modal\cf9 \strokec9 .\cf5 \strokec5 classList\cf9 \strokec9 .\cf5 \strokec5 contains\cf9 \strokec9 (\cf10 \strokec10 'hidden'\cf9 \strokec9 ))\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 hideModal\cf9 \strokec9 ();\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \});\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf8 \strokec8 // Close modal on outside click\cf5 \cb1 \strokec5 \
+\cb3         modal\cf9 \strokec9 .\cf5 \strokec5 addEventListener\cf9 \strokec9 (\cf10 \strokec10 'click'\cf9 \strokec9 ,\cf5 \strokec5  \cf9 \strokec9 (\cf5 \strokec5 e\cf9 \strokec9 )\cf5 \strokec5  \cf9 \strokec9 =>\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf12 \strokec12 if\cf5 \strokec5  \cf9 \strokec9 (\cf5 \strokec5 e\cf9 \strokec9 .\cf5 \strokec5 target \cf9 \strokec9 ===\cf5 \strokec5  modal\cf9 \strokec9 )\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 hideModal\cf9 \strokec9 ();\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \});\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 body\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 html\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+}
